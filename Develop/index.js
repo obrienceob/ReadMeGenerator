@@ -68,10 +68,25 @@ inquirer.prompt([
 ]);
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+const writeToFile = (fileName, data) => {
+    return writeAsyncFile (fileName, data);
+}
 
 // TODO: Create a function to initialize app
-function init() {}
+const init = () => {
+    questions().then((answers) => {
+        try {
+            console.log("Hello! This is a README file generator. /nPlease answer the following questions to generate a README file:")
+
+            const readmeContent = generateMd(answers);
+            await writeToFile('./output/README.md', readmeContent)
+            console.log('README created in output folder.');
+        } catch (err) {
+            console.error('Error creating README.');
+            console.log(err);
+        }
+    })
+}
 
 // Function call to initialize app
 init();
