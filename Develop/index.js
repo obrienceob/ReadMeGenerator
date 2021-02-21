@@ -1,7 +1,71 @@
 // TODO: Include packages needed for this application
+const inquirer = require('inquirer');
+const fs = require('fs');
+const util = require('util');
+const generateMd = require('./utils/generateMarkdown');
 
+const writeAsyncFile = util.promisify(fs.writeFile);
 // TODO: Create an array of questions for user input
-const questions = [];
+const questions = () =>
+inquirer.prompt([
+    {
+        type: 'input',
+        name: 'name',
+        message: 'What is the your GitHub username?',
+    },
+    {
+        type: 'input',
+        name: 'email',
+        message: 'What is your email address?',
+    },
+    {
+      type: 'input',
+      name: 'title',
+      message: 'What is the title of your project?',
+    },
+    {
+      type: 'input',
+      name: 'description',
+      message: 'What is a short description of your project?',
+    },
+    {
+      type: 'list',
+      name: 'license',
+      message: 'What license do you want to use for your project?',
+      choices: [
+          'MIT License',
+          'Unlicense',
+          'Apache License 2.0',
+          'Mozilla Public License 2.0',
+          'Common Development and Distribution License',
+          'GNU General Public License (GPL) v3',
+          'BSD 3-Clause',
+          'BSD 2-Clause',
+      ]
+    },
+    {
+      type: 'input',
+      name: 'install',
+      message: 'What command do you want to use to install dependencies? (default is npm i)',
+      default: 'npm i',
+    },
+    {
+      type: 'input',
+      name: 'test',
+      message: 'What command should be used to run tests? (default is npm run tests',
+      default: 'npm run test',
+    },
+    {
+      type: 'input',
+      name: 'usage',
+      message: 'What should the user know about using your repository?',
+    },
+    {
+      type: 'input',
+      name: 'contributions',
+      message: 'What should the user know about contributing to the repository?',
+    },
+]);
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {}
