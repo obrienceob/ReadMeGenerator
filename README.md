@@ -1,7 +1,7 @@
 # README Generator
 ![](https://img.shields.io/badge/License-MIT-yellow.svg)
 ## Description
-Using this project, you can generate a README file following command line application. This command-line application generates a professional REAME.md file from user inputs using the [Inquireer package] (https://www.npmjs.com/package/inquirer). It uses a index.js file to generate the questions, and a generateMarkdown.js file to generate the README file after acceptiing user inputs.
+Using this project, you can generate a README file following command line application. This command-line application generates a professional REAME.md file from user inputs using the [Inquirer package] (https://www.npmjs.com/package/inquirer). It uses a index.js file to generate the questions, and a generateMarkdown.js file to generate the README file after acceptiing user inputs.
 
 ## Table of Contents
 * [Installation](#installation)
