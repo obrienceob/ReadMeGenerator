@@ -21,7 +21,7 @@ npm i
 In order to run this repository, you will need to download the inquirer package, using the "npm install inquirer" command in your terminal, in the same repository the code is stored. Make sure you have your own package.json file created before installing the inquirer as a dependency. Also, I used this repo to create this README file!
 
 Here is an example video of the README generator in action: 
-![example]<iframe src="https://drive.google.com/file/d/1zS_QpiF6Q5p7wS8oU7lHNZChvhuZziij/preview" width="640" height="480"></iframe>
+![example](https://drive.google.com/file/d/1zS_QpiF6Q5p7wS8oU7lHNZChvhuZziij/view)
 
 ## License
 This repository is licensed under the MIT: (https://opensource.org/licenses/MIT) license.
