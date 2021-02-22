@@ -22,7 +22,7 @@ In order to run this repository, you will need to download the inquirer package,
 
 Here is an example video of the README generator in action: 
 
-![example](https://drive.google.com/file/d/1zS_QpiF6Q5p7wS8oU7lHNZChvhuZziij/view)
+![example]<img src="Images/Untitled_ Feb 21, 2021 5_27 PM.gif">
 
 
 ## License
