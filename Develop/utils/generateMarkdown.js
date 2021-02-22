@@ -34,7 +34,7 @@ function generateMarkdown(data) {
 
   // return markdown content
   return `# ${data.title}
-${data.licenseBadge}
+![]${data.licenseBadge}
 ## Description
 ${data.description}
 
