@@ -73,7 +73,7 @@ const writeToFile = (fileName, data) => {
 // TODO: Create a function to initialize app
 const init = async () => {
         try {
-            console.log("Hello! This is a README file generator. /nPlease answer the following questions to generate a README file:")
+            console.log("Hello! This is a README file generator. Please answer the following questions to generate a README file:")
 
             const answers = await questions();
             
