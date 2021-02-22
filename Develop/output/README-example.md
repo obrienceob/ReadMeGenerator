@@ -1,5 +1,5 @@
 # Example for my GitHub
-(https://img.shields.io/badge/License-MIT-yellow.svg)
+![](https://img.shields.io/badge/License-MIT-yellow.svg)
 ## Description
 This is just an example
 
