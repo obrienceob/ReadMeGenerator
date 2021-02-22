@@ -33,14 +33,12 @@ inquirer.prompt([
       name: 'license',
       message: 'What license do you want to use for your project?',
       choices: [
-          'MIT License',
+          'MIT',
           'Unlicense',
-          'Apache License 2.0',
+          'Apache 2.0',
           'Mozilla Public License 2.0',
-          'Common Development and Distribution License',
-          'GNU General Public License (GPL) v3',
+          'GNU v3',
           'BSD 3-Clause',
-          'BSD 2-Clause',
       ]
     },
     {
@@ -52,7 +50,7 @@ inquirer.prompt([
     {
       type: 'input',
       name: 'test',
-      message: 'What command should be used to run tests? (default is npm run tests',
+      message: 'What command should be used to run tests? (default is npm run tests)',
       default: 'npm run test',
     },
     {
@@ -73,20 +71,23 @@ const writeToFile = (fileName, data) => {
 }
 
 // TODO: Create a function to initialize app
-const init = () => {
-    questions().then((answers) => {
+const init = async () => {
         try {
             console.log("Hello! This is a README file generator. /nPlease answer the following questions to generate a README file:")
 
+            const answers = await questions();
+            
             const readmeContent = generateMd(answers);
-            await writeToFile('./output/README.md', readmeContent)
+            
+            await writeToFile('./output/README.md', readmeContent);
+            
             console.log('README created in output folder.');
         } catch (err) {
             console.error('Error creating README.');
             console.log(err);
         }
-    })
 }
+
 
 // Function call to initialize app
 init();
