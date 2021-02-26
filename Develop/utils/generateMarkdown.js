@@ -71,6 +71,6 @@ ${data.test}
 Questions about this repository? Please contact me at [${data.email}](mailto:${data.email}). View more of my work in GitHub at [${data.name}](https://github.com/${data.name}) 
 `;
 }
-// module.exports = renderLicenseSection;
+// module.exports the markdown generation;
 module.exports = generateMarkdown;
 
